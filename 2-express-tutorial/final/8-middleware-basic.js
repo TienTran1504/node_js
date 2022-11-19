@@ -10,8 +10,9 @@ const logger = (req, res, next) => { //middleware function
     console.log(method, url, time)
     next()
 }
+app.use(logger);
 
-app.get('/', logger, (req, res) => {
+app.get('/', (req, res) => {
     res.send('Home')
 })
 app.get('/about', logger, (req, res) => {

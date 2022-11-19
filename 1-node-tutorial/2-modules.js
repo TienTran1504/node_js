@@ -7,7 +7,7 @@ require('./7-mind-grenade')
 console.log(data);
 console.log(data.items);
 console.log(data.items[0]);
-console.log(data.singlePerson['name']);
+console.log(data.singlePerson['name']); // hay .name
 sayHi("tien");
 sayHi(names.john);
 sayHi(names.mary); // names.mary === undefined because not be exported

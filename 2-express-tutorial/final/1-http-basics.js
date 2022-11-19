@@ -10,7 +10,7 @@ const server = http.createServer((req, res) => {
     // home page
     if (url === '/') {
         res.writeHead(200, { 'content-type': 'text/html' })
-        res.end();
+        res.end("name");
     }
     // about page
     else if (url === '/about') {
@@ -26,4 +26,4 @@ const server = http.createServer((req, res) => {
     }
 })
 
-server.listen(6000)
+server.listen(5000)

@@ -1,6 +1,6 @@
 const express = require('express')
 const app = express()
-const { products } = require('./data')
+const { products } = require('../data')
 app.get('/', (req, res) => {
     res.send('<h1>Home page</h1><a href="/api/products">products</a>')
 })
@@ -45,7 +45,7 @@ app.get('/api/v1/query', (req, res) => {
         })
     }
     if (limit) {
-        sortedProducts = sortedProducts.slice(0, Number(limit));
+        sortedProducts = sortedProducts.splice(0, Number(limit));
     }
     if (sortedProducts.length < 1) {
         return res.status(200).json({ success: true, data: [] })

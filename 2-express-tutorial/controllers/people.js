@@ -12,6 +12,7 @@ const createPerson = (req, res) => {
             .json({ success: false, msg: 'please provide name value' })
     }
     res.status(201).json({ success: true, person: name })
+
 }
 
 const createPersonPostman = (req, res) => {
@@ -23,6 +24,7 @@ const createPersonPostman = (req, res) => {
     }
     // res.status(201).json({ success: true, data: [...people, { person: name }] })
     res.status(201).json({ success: true, data: [...people, name] })
+
 
 }
 

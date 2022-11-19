@@ -4,4 +4,4 @@ const tony = "tony"
 const mary = "mary"
 
 // console.log(module);
-module.exports = { john, tony }
+module.exports = { john, tony, susan, mary }
