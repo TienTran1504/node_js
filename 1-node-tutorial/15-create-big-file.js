@@ -1,4 +1,6 @@
 const { writeFileSync } = require('fs');
 for (let i = 0; i < 1000; i++) {
-    writeFileSync('./content/big.txt', `hello world ${i}\n`, { flag: 'a' })
+    for (let j = 0; j < 1000; j++) {
+        writeFileSync('./content/big.txt', `hello world ${i} ${j}\n`, { flag: 'a' })
+    }
 }

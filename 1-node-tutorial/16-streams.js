@@ -22,3 +22,7 @@ console.log("None: ", temp);
 
 // gzip = zlib.createGunzip();
 //zlib.createGzip : tạo file zip => đặt tên ghi file là vd: example.txt.gz cú pháp readStream.pipe(gzip).pipe(writeStream)
+
+
+//đọc theo stream thì sẽ đọc đc những file lớn do nó đọc chia nhỏ file ra đọc nhiều lần
+// đọc theo bình thường thì sẽ k đoc đc file quá lớn

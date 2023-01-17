@@ -9,6 +9,7 @@ const getAllProductsStatic = async (req, res) => {
 const getAllProducts = async (req, res) => {
     const { featured, company, name, sort, fields, numericFilters } = req.query;
     const queryObject = {}
+    console.log(numericFilters);
 
     if (featured) { // xử lý khi có thêm featured vào query
         queryObject.featured = featured === 'true' ? true : false
@@ -29,6 +30,7 @@ const getAllProducts = async (req, res) => {
         }
         const regEx = /\b(<|>|>=|=|<|<=)\b/g
         let filters = numericFilters.replace(regEx, (match) => `-${operatorMap[match]}-`)
+        console.log(filters);
         const options = ['price', 'rating'];
         filters = filters.split(',').forEach((item) => {
             const [field, operator, value] = item.split('-') // tách ra vd price $gt 30
